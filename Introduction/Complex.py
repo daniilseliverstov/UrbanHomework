@@ -1,0 +1,5 @@
+a = float(input('a='))
+b = float(input('b='))
+c = float(input('c='))
+f = (a * b) + (a * c)
+print(f ** 3 / 2)
