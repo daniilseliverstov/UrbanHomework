@@ -1,14 +1,12 @@
 def custom_write(file_name, strings):
     strings_positions = {}
     file = open(file_name, 'w', encoding='utf-8')
-    for string in strings:
+    for num, string in enumerate(strings, start=1):
         byte_num = file.tell()
         file.write(string + '\n')
-        num_string = len(strings_positions) + 1
-        strings_positions[(num_string, byte_num)] = string
+        strings_positions[(num, byte_num)] = string
     return strings_positions
     file.close()
-
 
 info = [
     'Text for tell.',
